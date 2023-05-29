@@ -53,6 +53,7 @@ public class Course {
 	private Professor professor;
 	
 	@OneToOne(mappedBy="course")
+	@ToString.Exclude
 	private Collection<Grade> grades;
 
 	

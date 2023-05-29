@@ -49,6 +49,7 @@ public class Professor {
 	private Degree degree;
 	
 	@OneToOne(mappedBy = "professor") // otra pusē @JoinColumn(name="Idp") 
+	@ToString.Exclude
 	private Course course;
 	
 	public Professor(String name, String surname, Degree degree) {

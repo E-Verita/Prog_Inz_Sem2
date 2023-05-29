@@ -44,6 +44,7 @@ public class Student {
 	@Column(name="Surname")
 	private String surname;
 	
+	@ToString.Exclude //neiekļaut Toštring, lai neaiziet infinite loop
 	@OneToMany(mappedBy="student")
 	private Collection<Grade> grades;
 	
