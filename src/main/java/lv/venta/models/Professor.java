@@ -52,9 +52,9 @@ public class Professor {
 	@Column(name = "Degree")
 	private Degree degree;
 
-	@ToString.Exclude
-	@ManyToMany(mappedBy = "professors")
-	private Collection<Course> courses = new ArrayList<Course>();
+	@ManyToMany(mappedBy="professors") // nav svarīgi, kurā pusē + skatīt @ManyToMany Course pusē
+	private Collection<Course> courses = new ArrayList<>();
+
 	
 	public Professor(String name, String surname, Degree degree) {
 		this.name = name;
