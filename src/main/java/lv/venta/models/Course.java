@@ -80,5 +80,10 @@ public class Course {
 	
 	
 	//TODO izveidot profesora izdzēsanas funkciju
-	
+	public void removeProfessor(Professor inputProfessor) {
+		if(professors.contains(inputProfessor))
+		{
+			professors.remove(inputProfessor);
+		}
+	}
 }
