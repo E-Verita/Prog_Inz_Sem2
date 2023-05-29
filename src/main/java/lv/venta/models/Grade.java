@@ -43,6 +43,15 @@ public class Grade {
 	@ManyToOne
 	@JoinColumn(name="Idc")
 	private Course course;
+
+	//iet iekšā mainīgie ar @JoinColumn
+	public Grade(@Min(0) @Max(10) int gradeValue, Student student, Course course) {
+		this.gradeValue = gradeValue;
+		this.student = student;
+		this.course = course;
+	}
 	
 	//todo: izveidot arg constr
+	
+	
 }

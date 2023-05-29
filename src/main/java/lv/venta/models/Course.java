@@ -47,15 +47,28 @@ public class Course {
 	@Column(name="creditPoints")
 	private int creditPoints;
 	
+	//Izveidot saites
 	@OneToOne
 	@JoinColumn(name="Idp") // otrā pusē 	@OneToOne(mappedBy = "professor")
 	private Professor professor;
 	
 	@OneToOne(mappedBy="course")
 	private Collection<Grade> grades;
+
 	
-	//TODO: izveidot argumenta konstruktoru
-	//TODO: Izveidot saites
+	//Izveidot argumenta konstruktoru
+	public Course(
+			@Pattern(regexp = "[A-ZĀČĒĪĶĻŅŠŪŽ]{1}[a-zāčēīķļņšūž\\ ]+", message = "Pirmajam burtam jābūt lielajam") @NotNull @Size(min = 3, max = 30) String title,
+			@Min(1) @Max(20) int creditPoints, Professor professor) {
+		super();
+		this.title = title;
+		this.creditPoints = creditPoints;
+		this.professor = professor;
+	}
+	
+
+	
+	
 	
 	
 }
