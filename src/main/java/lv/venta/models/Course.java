@@ -1,5 +1,7 @@
 package lv.venta.models;
 
+import java.util.Collection;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -48,6 +50,9 @@ public class Course {
 	@OneToOne
 	@JoinColumn(name="Idp") // otrā pusē 	@OneToOne(mappedBy = "professor")
 	private Professor professor;
+	
+	@OneToOne(mappedBy="course")
+	private Collection<Grade> grades;
 	
 	//TODO: izveidot argumenta konstruktoru
 	//TODO: Izveidot saites
