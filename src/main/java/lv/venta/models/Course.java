@@ -69,13 +69,15 @@ public class Course {
 		this.professors = professors;
 	}
 	
-	
+	//obligāti ManyToMany
 	public void addProfessor(Professor inputProfessor) {
 		if(!professors.contains(inputProfessor))
 		{
 			professors.add(inputProfessor);
 		}
 	}
+	
+	
 	
 	//TODO izveidot profesora izdzēsanas funkciju
 	

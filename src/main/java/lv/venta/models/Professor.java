@@ -62,6 +62,12 @@ public class Professor {
 		this.degree = degree;
 	}
 	
+	//obligāti ManyToMany
+	public void addCourse(Course inputCourse) {
+		if(!courses.contains(inputCourse)) {
+			courses.add(inputCourse);
+		}
+	}
 	
 
 	
