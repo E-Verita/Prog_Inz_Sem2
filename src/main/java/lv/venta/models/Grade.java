@@ -37,7 +37,7 @@ public class Grade {
 	
 	
 	@ManyToOne
-	@JoinColumn(name="Ids")
+	@JoinColumn(name="Idpe")
 	private Student student;
 	
 	@ManyToOne
